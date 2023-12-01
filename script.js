@@ -1,14 +1,5 @@
-nality
-    removeButton.addEventListener('click', function (event) {
-        const btn = event.target;
-        const parent = btn.parentNode;
-        parent.remove();
-    });
 
-    newListItem.appendChild(removeButton);
-    list.appendChild(newListItem);
-    input.value = '';
-    input.focus();//Look for what a user types
+    
 const list = document.querySelector('#list');
 const form = document.querySelector('#addToList');
 const input = document.querySelector('#itemToAdd');
@@ -39,5 +30,15 @@ form.addEventListener('submit', function (event) {
     newListItem.appendChild(removeButton);
 
     //Create the remove button function
+    removeButton.addEventListener('click', function (event) {
+        const btn = event.target;
+        const parent = btn.parentNode;
+        parent.remove();
+    });
+
+    newListItem.appendChild(removeButton);
+    list.appendChild(newListItem);
+    input.value = '';
+    input.focus();//Look for what a user types
 
 });
